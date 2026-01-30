@@ -1,7 +1,9 @@
 name: causal_ml
+
 channels:
   - conda-forge
   - defaults
+
 dependencies:
   - python=3.10
   - pip
@@ -14,9 +16,11 @@ dependencies:
   - ipykernel=6.25.0
   - scipy=1.11.1
   - statsmodels=0.14.0
+  - numba         # NEW: let conda install numba
+  - llvmlite      # NEW: and llvmlite
   - pip:
       - econml==0.14.1
       - dowhy==0.11
-      - shap==0.42.1
+      - shap==0.41.0      # keep <0.42.0 for econml
       - xgboost==1.7.6
       - lightgbm==4.0.0
